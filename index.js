@@ -1,10 +1,5 @@
 import chalk from "chalk";
 import readlinesync from 'readline-sync'
-// var playerScore = 0
-// var playerName = ""
-
-// var playerChoice = "Yes"
-//0 - New Player 1 - Existing player
 var highScores = [
   {
     "Name": "Asish",
@@ -139,7 +134,7 @@ function checkHighScores(playerName, score) {
   var [currentMaxScore, currentMaxScorerName, index] = getCurrentHighScore()
 
   if (score > currentMaxScore) {
-    console.log(chalk.green('Congratulations!!' + playerName + ' You beat ' + currentMaxScorerName + " to have the highest score in the game.\n"))
+    console.log(chalk.green('Congratulations!! ' + playerName + ' You beat ' + currentMaxScorerName + " to have the highest score in the game.\n"))
     highScores[index].Name = playerName
     highScores[index].Score = score
     showLeaderBoard()
